@@ -1,0 +1,138 @@
+.pestañaEntrar {
+
+    .entrar {
+        margin: 0;
+        background: red;
+        height: 50px;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 80px;
+        transition: margin 1s, border-top-right-radius 1.5s, border-bottom-right-radius 1.5s;
+    }
+
+     .registrar{
+        font-size: 24px;
+        cursor: pointer;
+        padding-top: 10px;
+        text-align: center;
+        display: block;
+        position: absolute;
+        margin: -20px 200px;
+        width: 200px;
+        height: 70px;
+        background: #1A8093;
+        border-top-left-radius: 15px;
+        transition: margin 1s, border-top-left-radius 1.5s, border-bottom-left-radius 1.5s;
+    }
+
+    .usuario-reg {
+        display: block;
+        position: absolute;
+        margin: 100px 50px;
+        width: 300px;
+        height: 35px;
+        z-index: 1;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .nombre-reg {
+        display: block;
+        position: absolute;
+        margin: 160px 50px;
+        width: 300px;
+        height: 35px;
+        z-index: 1;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .password-reg {
+        display: block;
+        position: absolute;
+        margin: 220px 50px;
+        width: 300px;
+        height: 35px;
+        color: black;
+        z-index: 3;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .word-reg {
+        display: block;
+        position: absolute;
+        margin: 280px 50px;
+        width: 300px;
+        height: 35px;
+        z-index: 1;
+        color: black;
+    }
+    
+    .submit-reg {
+        display: block;
+        position: absolute;
+        margin: 400px 50px;
+        width: 300px;
+        height: 50px;
+        background: black;
+        z-index: 1;
+        color: #FFFFFF;
+        font-size: 20px;
+        text-align: center;
+        border: none;
+        &:active {
+            opacity: 0.5;
+        }
+    }
+    
+    .usuario-enter{
+        display: none;
+    }
+    
+    .password-enter{
+        display: none;
+    }
+    
+    .volver{
+        display: none;
+    }
+    
+    .submit-enter{
+        display: none;
+    }
+
+    .pregunta{
+        display: none;
+    }
+
+    .usuario-recuperar{
+        display: none;
+    }
+    
+    .word-recuperar{
+        display: none;
+    }
+    
+    .password-recuperar{
+        display: none;
+    }
+    
+    .submit-recuperar{
+        display: none;
+    }
+    
+    .recuperar{
+        display: none;
+    }
+    
+
+    
+
+    
+
+
+
+
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro devoluciones</title>
+    <link rel="stylesheet" href="../CSS/style2.css">
+</head>
+<body>
+
+  <!--menu-->
+<div class="container1">  
+  <nav>
+    <ul class="menu">
+      <li><a href="rentar.html"> formulario ingreso datos</a></li>
+      <li><a href="htt.html">formulario Devolucion</a></li>
+      <li><a href="tabla.html">tabla de datos</a></li>      
+    </ul>
+</nav>
+</div>   
+<!--formulario-->  
+    <h1> DEVOLUCION DE CARROS</h1>
+
+<div class="container">
+  <form id="formulario">
+    <div class="letras">
+      <select name="numeroEntrega" style="font-size: 20px;" id="numeroEntrega">
+        <option value=""></option>
+      </select>
+    <div>
+      <label  for="numeroPlaca" style="font-size: 20px;" >  Numero De Placa</label>
+      <input type="text"  id="numeroPlaca" name="numeroPlaca">
+    </div>
+
+      <label for="fechaDevolucion" style="font-size: 20px;">Fecha De Devolucion</label> 
+      <input type="date" id="fechaDevolucion" name="fechaDevolucion">
+    </div>
+  
+<!-- botones cerrar seccion y  guardar-->  
+    <div class="botones">
+      <button type="button" id="btnguardar" name="btnguardar">Guardar datos</button>
+      <button type="button"  id="btnsearch" >Buscar</button>
+      <button type="button"  id="btnClean" name="btnClean">limpiar</button>
+<!-- boton cerrar seccion-->
+      <button id="logotButton" type="button" >Cerrar Seccion</button>
+
+    </div> 
+  </form>
+</div>
+<script src="../JS/script.js" ></script>
+
+</body>
+</html>
+

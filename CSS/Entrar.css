@@ -1,0 +1,145 @@
+
+.entrar{
+    font-size: 24px;
+    cursor: pointer;
+    padding-top: 10px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin-top: -20px;
+    width: 200px;
+    height: 70px;
+    background:#1A8093;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 80px;
+    transition: margin 1s, border-top-right-radius 1.5s, border-top-left-radius 1.5s;
+  }
+ .registrar {
+    font-size: 24px;
+    cursor: pointer;
+    padding-top: 10px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin: 0 200px;
+    width: 200px;
+    height: 50px;
+    background: red;
+    border-bottom-left-radius: 80px;
+    border-top-right-radius: 15px;
+    transition: margin 1s,border-top-right-radius 1.5s, border-bottom-left-radius 1.5s;    
+  }
+
+  .usuario-enter {
+    display: block;
+    position: absolute;
+    margin: 100px 50px;
+    width: 300px;
+    height: 35px;
+    z-index: 1;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.password-enter {
+    display: block;
+    position: absolute;
+    margin: 160px 50px;
+    width: 300px;
+    height: 35px;
+    color: black;
+    z-index: 3;
+    font-size: 20px;
+    text-align: center;
+}
+
+.volver {
+    display: block;
+    position: absolute;
+    padding: 5px;
+    margin: 350px 45px;
+    width: 300px;
+    height: 30px;
+    background: rgb(242, 242, 204);
+    z-index: 1;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 15px;
+    border: none;
+
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+.submit-enter {
+    display: block;
+    position: absolute;
+    margin: 400px 50px;
+    width: 300px;
+    height: 50px;
+    background: black;
+    z-index: 1;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+.pregunta {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial;
+    position: absolute;
+    margin: 450px 200px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.usuario-reg {
+    display: none;
+}
+
+.nombre-reg {
+    display: none;
+}
+
+.password-reg {
+    display: none;
+}
+
+.word-reg {
+    display: none;
+}
+
+.submit-reg {
+    display: none;
+}
+
+.recuperar{
+    display: none;
+}
+
+.usuario-recuperar{
+    display: none;
+}
+
+.word-recuperar{
+    display: none;
+}
+
+.password-recuperar{
+    display: none;
+}
+.submit-recuperar{
+    display: none;
+}

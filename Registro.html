@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/General.css">
+  <link rel="stylesheet" href="./CSS/Registro.css">
+  <link rel="stylesheet" href="./CSS/Entrar.css">
+  <link rel="stylesheet" href="./CSS/Recuperar.css">
+  <title>REGISTRO RENTA DE CARRO</title>
+</head>
+
+<body>
+
+  <div class='container'>
+
+    <div class='pestañas'>
+      <div class='registrar'>REGISTRO</div>
+      <div class='entrar'>ENTRAR</div>
+      <div class='volver'>REGISTRESE ACA</div>
+    </div>
+
+    <form name="formEnter" id="formEnter"  >
+      <input type='text' name='usuario-enter' class='usuario-enter' id="usuario-enter" placeholder='INGRESE SU USUARIO' required></input>      
+      <input type='password' name='pas-esword-enter' class='password-enter' id="password-enter" placeholder='INGRESE SU CLAVE' required></input>
+      <input type='submit' name='submitnter' class='submit-enter' value='ENTRAR'></input>
+    </form>
+
+    <form name='formRegistrar' id="formRegistrar"  >
+      <input type='text' name='usuario-reg' class='usuario-reg' id="usuario-reg" placeholder='INGRESE SU USUARIO' required autofocus></input>
+      <input type='text' name='nombre-reg' class='nombre-reg' id="nombre-reg" placeholder='INGRESE SU NOMBRE' required></input>
+      <input type='password' name='password-reg' class='password-reg' id="password-reg" placeholder='INGRESE SU CLAVE' required></input>
+      <input type='text' name='word-reg' class='word-reg' id="word-reg" placeholder='INGRESA PALABRA CLAVE' required></input>
+      <input type='submit' name='submit-reg' class='submit-reg' value='REGISTRARSE' ></input>
+    </form>
+
+    <form name="recuperarForm" id="recuperarForm" >
+      <input type='text' name='usuario-recuperar' class='usuario-recuperar' id="usuario-recuperar" placeholder='INGRESE SU USUARIO' required></input>
+      <input type='text' name='word-recuperar' class='word-recuperar' id="word-recuperar" placeholder='INGRESA PALABRA CLAVE' required></input>      
+      <input type='password' name='password-recuperar' class='password-recuperar' id="password-recuperar" placeholder='INGRESE SU NUEVA CLAVE'required></input>
+      <input type='submit' name='submit-recuperar' class='submit-recuperar' value='RECUPERAR CONTRASEÑA'></input>
+    </form>
+
+    <div class="volver-entrar">
+      <div class='recuperar'>RECUPERAR CUENTA</div>
+      <div class='pregunta'>olvidaste la contraseña?</div>
+    </div>
+
+  </div>
+
+<script src="./JS/pestañas.js"></script>
+<script src="./JS/Registro.js"></script>
+<script src="./JS/Entrar.js"></script>
+<script src="./JS/recuperar.js"></script>
+
+</body>
+</html>

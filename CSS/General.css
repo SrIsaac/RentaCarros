@@ -1,0 +1,32 @@
+
+body{
+  font-family: 'Bree Serif', serif;
+  color: #FFFFFF;
+  background: grey;
+}
+
+.container{
+  align-content: center;
+  display: flex;
+  margin: 140px auto;
+  width: 400px;
+  height: 500px;
+  background: #1A8093;
+  border-radius: 20px;
+}
+
+input[type='text'] {
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+input[type='password'] {
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+
+
+

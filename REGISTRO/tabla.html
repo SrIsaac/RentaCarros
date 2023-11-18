@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabla de datos</title>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="htt.html">formulario Devolucion</a></li>
+        <li><a href="index.html">tabla de datos</a></li>
+
+        <div class="container">
+            <h1> tabla de devoluciones</h1> 
+            <div id="carform">
+              </div>
+            </div> 
+          
+            <!--tabla-->
+   <script>
+   let carform=document.getElementById('carform')
+   console.log(localStorage.getItem("arrayDatos"));
+   let mcar=JSON.parse(localStorage.getItem("arrayDatos"));
+                 // console.log(mprods.length);
+  if(mcar.length >  0 ){  // si la logitud es mayor   CERO entonces hay un producto
+        let mytable=`
+         <table class="table table-hover">
+          <thead>
+         <th>Id numero de entrega</th>
+        <th>numero de placa</th>
+       <th>fecha devolucion</th>
+                             
+          </thead>
+                         
+                     `
+             // recorrer el arreglo de mprod atravez de la funcion map
+             mcar.map(prod =>{
+           mytable += `
+           <tr> 
+             <td>${prod.numeroEntrega} </td>
+          
+             <td>${prod.numeroPlaca} </td>
+             <td>${prod.fechaDevolucion} </td>
+             
+              <button class =  'btn btn-succes'> reservar otra vez </button>
+             </td>
+           </tr>
+           
+           `
+          
+             })
+             mytable+= ` </tbody></table>`
+             carform.innerHTML=mytable;
+                     
+                 }
+             else{
+            carform.innerHTML="<h2> No hay carros para devolver</h2>" 
+               
+             }    
+           </script>
+              
+          
+<!--funcion guardar-->
+<!--
+function guardarDatos() {
+  var arrayDatos = [];
+  var dato1 = document.getElementById("elemento1").value;
+  var dato2 = document.getElementById("elemento2").value;
+  var dato = {
+      campo1: dato1,
+      campo2: dato2
+  };
+  arrayDatos.push(dato);
+  localStorage.setItem("arrayDatos", JSON.stringify(arrayDatos));
+}
+
+   --> 
+
+
+   <!--
+    // Función para agregar datos al arreglo de objetos datos
+function addProduct(numeroEntrega, numeroPlaca, fechaDevolucion) {
+  let sEntrega = findProduct(numeroEntrega);
+  if (!sEntrega) {
+    // No encuentra el idprod
+    //Agregar el producto al arreglo de objetos products
+    products.push({
+      numeroEntrega: numeroEntrega,
+      numeroPlaca: numeroPlaca,
+      fechaDevolucion: fechaDevolucion,
+      
+    });
+    message.classList.remove("alert-danger");
+    message.classList.add("alert-success");
+    message.textContent = "Producto agregado exitosamente ...";
+     localStorage.setItem("products",JSON.stringify(datos))
+     console.log(JSON.parse(localStorage.getItem("datos")))
+     console.log(localStorage.getItem("datos"));
+    setTimeout(() => {
+      message.textContent = "";
+      message.classList.add("d-none");
+    }, 3000);
+  } else {
+    message.classList.remove("alert-success");
+    message.classList.add("alert-danger");
+    message.textContent = "Id de producto EXISTENTE. Inténtelo con otro ...";
+    setTimeout(() => {
+      message.textContent = "";
+      message.classList.add("d-none");
+    }, 3000);
+  }
+}
+
+
+
+
+
+
+
+   -->
+</body>
+</html>
