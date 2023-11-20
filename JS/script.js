@@ -1,9 +1,7 @@
 let formulario = document.getElementById("formulario");
 let numeroEntrega = document.getElementById("numeroEntrega");
 let numeroPlaca = document.getElementById("numeroPlaca");
-let fechaDevolucion = document.getElementById("fechaDevolucion");
-let btnguardar = document.getElementById("btnguardar");
-let btnSearch = document.getElementById("bntsearch");
+let btnupdate = document.getElementById("btnUpdate");
 let numRenta = document.querySelector("#numRenta");
 let placa = document.querySelector("#placa");
 let inicio = document.querySelector("#inicio");
@@ -26,28 +24,19 @@ btnClean.addEventListener("click", () => {
 });
 
 //--------------------funcion para buscar -----------------
-function findcarro(numRenta) {
-  let local = agregarSacarInfo();
-  if (numRenta) {
-    // let parseData=JSON.parse(local);
-    // console.log(parseData.inicio);
-    // console.log(parseData.final);
-  } else {
-    // console.log('no entro');
-  }
-}
-function searchCarro(numRenta) {
-  let scarro = findcarro(numRenta);
-}
 
 document.addEventListener("DOMContentLoaded", function () {
   const btnSearch = document.getElementById("btnsearch");
+  const btnupdate = document.getElementById("btnUpdate");
+  // -------------------evento Buscar----------------
   btnSearch.addEventListener("click", () => {
-    searchCarro(renta());
+    renta()
     pintarData()
   });
+
 });
 
+// -------------------pintar datos ---------------------------
 function renta() {
   let numerosRenta = [];
   let local = agregarSacarInfo();
@@ -71,23 +60,40 @@ function pintarOptio() {
       `;
   });
 }
-
+// ------------------fin pintar datos-----------------------
 function pintarData(){
   const data=document.querySelector('#numeroEntrega').value;
   const devolucion=document.querySelector('#fechaDevolucion');
   const placa=document.querySelector("#numeroPlaca");
   let local = agregarSacarInfo();
-
+  
   console.log(devolucion);
-
+  
   for(let i=0; i<local.length;i++){
     if (data==local[i].numRenta){
       placa.value=local[i].placa;
       devolucion.value=local[i].final;
-      
-      
+      // -----------------evento actualizar------------
+      btnupdate.addEventListener("click", () => {
+        local[i].final=devolucion.value
+        localStorage.setItem('Renta',JSON.stringify(local))
+      });
+      //--------------fin evento actualizar------------
     }
   }
-
-
 }
+
+//-------------------- logout---------------
+const user = JSON.parse(localStorage.getItem('login_success')) || false
+if(!user){
+    window.location.href = '../Registro.html'
+}
+
+const logout = document.querySelector('#logout')
+
+logout.addEventListener('click', ()=>{
+
+    alert(`Hasta pronto! ${user.usuario}`)
+    localStorage.removeItem('login_success')
+    window.location.href = '../Registro.html'
+})

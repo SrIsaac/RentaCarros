@@ -8,12 +8,11 @@
 </head>
 <body>
     <div class="container1">  
-        <nav>
+        <nav class="nav-container">
            <ul class="menu">
-                    <li><a href="rentar.html"> formulario ingreso datos</a></li>
-                    <li><a href="htt.html">formulario Devolucion</a></li>
-                    <li><a href="tabla.html">tabla de datos</a></li>  
-                    <li><a href="" id="logout">Logout</a></li>             
+                    <li><a href="rentar.html">Rentar Carro</a></li>
+                    <li><a href="htt.html">Devolucion</a></li>  
+                    <li><a href="" id="logout">Cerrar Sesion</a></li>             
         </nav>
         </div> 
     <div class="form-container">
@@ -26,7 +25,7 @@
                     <div class="cont">
                         <label for="" name="placa"> Placa</label>
                         <select type="text" id="placa" name="placa">
-                            <option value="" select disabled>Seleccione Placa del Carro</option>
+                            <option value="Seleccione Placa del Carro" select disabled>Seleccione Placa del Carro</option>
                             <option value="OUZ321">OUZ321</option>
                             <option value="ARQ123">ARQ123</option>
                             <option value="BSA567">BSA567</OPtion>
@@ -37,21 +36,17 @@
                     </div>
                     <div class="cont">
                         <label for="" name="inicio"> Fecha Inicial</label>
-                        <input type="date" id="inicio" name="inicio">
+                        <input type="date" id="inicio" name="inicio" value="22023-11-24">
                     </div>
                     <div class="cont">
                         <label for="" name="final"> Fecha Final</label>
-                        <input type="date" id="final" name="final">
+                        <input type="date" id="final" name="final" value="22023-11-20">
                     </div>
                     <div class="cont">
                         <label for="" name="numRenta"> Numero Rentar</label>
-                        <input type="text" id="numRenta" name="numRenta">
+                        <input type="text" id="numRenta" name="numRenta" select disabled>
                     </div>
-                    <div class="boton"><button id="boton">Guardar</button></div>
-                    <div class="enlaces">
-                        <span><a href="">Lista de vehiculos Disponible</a></span>
-                        <span><a href="ReContraseña.html">Cerrar Sesión</a></span>
-                    </div> 
+                    <div class="boton"><button id="boton" onclick="location.reload()">Guardar</button></div>
                 </div>
             </div>
         </form>   
